@@ -1872,6 +1872,11 @@ NSString * const SWSegueRightIdentifier = @"sw_right";
 
 @implementation SWRevealViewControllerSeguePushController
 
+- (id) initWithIdentifier:(NSString *)identifier sourceController:(UIViewController *) sourceVC destinationViewController:(UIViewController *)destVC
+{
+    return [super initWithIdentifier:identifier source:sourceVC destination:destVC];
+}
+
 - (void)perform
 {
     SWRevealViewController *rvc = [self.sourceViewController revealViewController];

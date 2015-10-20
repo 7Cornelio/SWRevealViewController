@@ -412,6 +412,10 @@ extern NSString* const SWSegueRightIdentifier; // this is @"sw_right"
 
 // Use this to push a view controller
 @interface SWRevealViewControllerSeguePushController : UIStoryboardSegue
+
+// This allows programmatically creation of these segues, which allows them to work across different storyboards
+- (id) initWithIdentifier:(NSString *)identifier sourceController:(UIViewController *) sourceVC destinationViewController:(UIViewController *)destVC;
+
 @end
 
 
